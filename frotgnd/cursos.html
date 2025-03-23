@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cursos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="cursos.css">
+</head>
+<body>
+    <div class="navbar">
+        <img alt="Platzi logo" src="https://placehold.co/40x40"/>
+        <div></div>
+        <a class="login" href="#" id="loginBtn">Acceder</a>
+    </div>
+
+    <div class="main-content">
+        <h1>La escuela de tecnología <br><span>de Latinoamérica</span></h1>
+        <p>Más de 5 millones de estudiantes y más de 3,000 empresas aprenden en cursos</p>
+        <p>¿Qué quieres aprender?</p>
+        <div class="search-bar">
+            <input id="animated-input" placeholder="Liderazgo y" type="text"/>
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="footer">
+            <p>Inicia cualquier curso gratis.<br>O adquiere <a href="#">curso para tu empresa</a></p>
+        </div>
+    </div>
+
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" id="closeBtn">×</span>
+            <h2>Iniciar Sesión</h2>
+            <input placeholder="Correo electrónico" type="email"/>
+            <input placeholder="Contraseña" type="password"/>
+            <button>Acceder</button>
+        </div>
+    </div>
+
+    <script src="cursos.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.course-header {
+    margin-bottom: 20px;
+}
+
+.course-header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.course-header .rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.course-header .rating i {
+    color: #FFD700;
+}
+
+.course-header .rating span {
+    font-size: 1rem;
+}
+
+.course-details {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.course-details span {
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.course-description {
+    margin-bottom: 20px;
+}
+
+.course-classes {
+    margin-bottom: 20px;
+}
+
+.course-classes h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.class-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.class-item img {
+    width: 100px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.class-item .class-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.class-item .class-info h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.class-item .class-info span {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .main-content {
+        padding: 10px;
+    }
+    .course-header h1 {
+        font-size: 1.5rem;
+    }
+    .course-header .rating span {
+        font-size: 0.8rem;
+    }
+    .course-details {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .course-details span {
+        font-size: 0.8rem;
+    }
+    .class-item img {
+        width: 80px;
+        height: 50px;
+    }
+}
