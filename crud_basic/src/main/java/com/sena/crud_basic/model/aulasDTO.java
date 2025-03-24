@@ -1,10 +1,13 @@
 package com.sena.crud_basic.model;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity(name = "aulas")
 public class aulasDTO {
@@ -20,7 +23,11 @@ public class aulasDTO {
     @Column(name = "capacidad", nullable = false)
     private int capacidad;
 
-    // Constructor
+    // Relación OneToMany con Cursos (según tu estilo)
+    @OneToMany(mappedBy = "id_aula")
+    private List<cursosDTO> cursos;
+
+    // Constructores
     public aulasDTO() {}
 
     public aulasDTO(int id_aulas, String numero, int capacidad) {
@@ -54,7 +61,14 @@ public class aulasDTO {
         this.capacidad = capacidad;
     }
 
-    // Método toString
+    public List<cursosDTO> getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(List<cursosDTO> cursos) {
+        this.cursos = cursos;
+    }
+
     @Override
     public String toString() {
         return "aulasDTO{" +

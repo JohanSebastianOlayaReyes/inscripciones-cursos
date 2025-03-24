@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity(name = "cursos")
 public class cursosDTO {
@@ -19,6 +21,11 @@ public class cursosDTO {
 
     @Column(name = "descripción", columnDefinition = "TEXT")
     private String descripción;
+
+    // Relación ManyToOne con Aulas (según tu estilo)
+    @ManyToOne
+    @JoinColumn(name = "id_aula")
+    private aulasDTO id_aula;
 
     // Getters y Setters
     public int getId_cursos() {
@@ -43,5 +50,13 @@ public class cursosDTO {
 
     public void setDescripción(String descripción) {
         this.descripción = descripción;
+    }
+
+    public aulasDTO getId_aula() {
+        return id_aula;
+    }
+
+    public void setId_aula(aulasDTO id_aula) {
+        this.id_aula = id_aula;
     }
 }
